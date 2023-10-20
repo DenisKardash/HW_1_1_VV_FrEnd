@@ -4,23 +4,24 @@ import './App.css';
 const year = new Date();
 
 export const App = () => {
-	return (
-		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
+	const appToHTML = `<div class="App">
+			<header class="App-header">
+				<img src=${logo} class="App-logo" alt="logo" />
 				<p>
 					Edit <code>src/App.js</code> and save to reload.
 				</p>
 				<a
-					className="App-link"
+					class="App-link"
 					href="https://reactjs.org"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
 					Learn React
 				</a>
-				<div>На данный момент {year.getFullYear()} год</div>
+				<div>На данный момент ${year.getFullYear()} год</div>
 			</header>
 		</div>
-	);
+	`;
+
+	return (document.body.innerHTML = appToHTML);
 };
