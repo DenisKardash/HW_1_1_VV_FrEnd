@@ -2,9 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import { createElement } from 'react';
 
-const year = new Date();
+const yearNow = new Date();
 
-const code = createElement('code', null, 'src/App.js');
+const codeTag = createElement('code', null, 'src/App.js');
 
 export const App = () => {
 	return createElement(
@@ -18,7 +18,7 @@ export const App = () => {
 				src: `${logo}`,
 				alt: 'logo',
 			}),
-			createElement('p', null, `Edit `, code, ` and save to reload.`),
+			createElement('p', null, `Edit `, codeTag, ` and save to reload.`),
 			createElement(
 				'a',
 				{
@@ -29,7 +29,7 @@ export const App = () => {
 				},
 				'Learn React',
 			),
-			createElement('div', null, `На данный момент ${year.getFullYear()} год`),
+			createElement('div', null, `На данный момент ${yearNow.getFullYear()} год`),
 		),
 	);
 };
